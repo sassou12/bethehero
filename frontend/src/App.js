@@ -1,8 +1,12 @@
 import React from 'react';
 
+import './styles/global.css';
+
+import Routes from './routes';
+
 function App() {
   return (
-      <h1>Hello Semana OmniStack 11.0</h1>
+    <Routes/>
   );
 }
 
