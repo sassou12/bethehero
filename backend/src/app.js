@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const { errors } = require('celebrate');
 const routes = require('./routes');
 
 const app = express();
@@ -12,5 +13,9 @@ app.use(express.json());
  * Middleware das rotas da aplicação
  */
 app.use(routes);
+/**
+ * Middleware de valição (celebrate/Joi)
+ */
+app.use(errors());
 
-app.listen(3333);
+module.exports = app;
